@@ -36,7 +36,7 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-transparent">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

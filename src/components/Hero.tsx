@@ -6,7 +6,7 @@ import FloatingIcons from './FloatingIcons';
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-transparent relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-start md:items-center bg-transparent relative overflow-hidden pt-24 md:pt-0">
       <div className="container mx-auto px-12 lg:px-20 grid lg:grid-cols-2 gap-20 items-center">
         {/* Left Side - Text */}
         <motion.div
@@ -121,12 +121,18 @@ export default function Hero() {
         transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <motion.div
+        <motion.button
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+          onClick={() => {
+            const element = document.querySelector('#about');
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="text-muted hover:text-primary transition-colors focus:outline-none"
+          aria-label="Scroll to About section"
         >
-          <ChevronDown className="w-8 h-8 text-muted hover:text-primary transition-colors cursor-pointer" />
-        </motion.div>
+          <ChevronDown className="w-8 h-8" />
+        </motion.button>
       </motion.div>
     </section>
   );

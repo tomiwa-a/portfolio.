@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Calendar, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import BlogCard from './BlogCard';
 
 const blogPosts = [
   {
@@ -26,7 +27,7 @@ const blogPosts = [
 export default function Blog() {
   return (
     <section id="blog" className="py-20 bg-transparent">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,36 +39,15 @@ export default function Blog() {
           <p className="text-lg text-muted max-w-2xl mx-auto mb-8">
             Thoughts on software engineering, system design, and technology trends
           </p>
-          <button className="text-primary hover:text-primary/80 transition-colors font-medium flex items-center mx-auto">
-            View All Posts
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </button>
+           <Link to="/blog" className="text-primary hover:text-primary/80 transition-colors font-medium flex items-center mx-auto">
+             View All Posts
+             <ArrowRight className="w-4 h-4 ml-2" />
+           </Link>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
-            <motion.div
-              key={post.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full bg-card border-border hover:border-primary transition-colors cursor-pointer">
-                <CardHeader>
-                  <CardTitle className="text-foreground hover:text-primary transition-colors">
-                    {post.title}
-                  </CardTitle>
-                  <CardDescription className="text-muted">{post.excerpt}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center text-sm text-muted">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {new Date(post.date).toLocaleDateString()} • {post.readTime}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+            <BlogCard key={post.title} post={post} index={index} />
           ))}
         </div>
       </div>

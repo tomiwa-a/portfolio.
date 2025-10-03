@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 import { GitBranch, Briefcase, Bird } from 'lucide-react';
 
 const socialLinks = [
-  { icon: GitBranch, href: 'https://github.com/username', label: 'GitHub' },
-  { icon: Briefcase, href: 'https://linkedin.com/in/username', label: 'LinkedIn' },
-  { icon: Bird, href: 'https://twitter.com/username', label: 'Twitter' },
+  { icon: Bird, href: 'https://x.com/tomiwa_amole', label: 'X' },
+  { icon: GitBranch, href: 'https://github.com/tomiwa-a', label: 'GitHub' },
+  { icon: Briefcase, href: 'https://www.linkedin.com/in/amole-oluwatomiwa-5a083b167/', label: 'LinkedIn' },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-card border-t border-border py-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-muted text-sm">
-            © 2024 Your Name. All rights reserved.
+            © {new Date().getFullYear()} Tomiwa. All rights reserved.
           </p>
         </motion.div>
       </div>
