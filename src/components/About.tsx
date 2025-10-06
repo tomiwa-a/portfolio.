@@ -38,40 +38,48 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-transparent">
-      <div className="container mx-auto px-12 lg:px-20">
+    <section id="about" className="py-12 bg-transparent">
+      <div className="container mx-auto px-8 lg:px-16">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-4xl font-heading font-bold text-foreground mb-6"
-          >
-            About Me
-          </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center mb-12"
-          >
-            <p className="text-lg text-muted mb-4">
-              Passionate backend engineer with 5 years of experience building scalable systems,
-              primarily working on financial applications. I specialize in creating efficient,
-              high-performance solutions that solve complex problems.
-            </p>
-            <p className="text-lg text-muted italic">
-              But really, I code for fun.
-            </p>
-          </motion.div>
+          <div className="max-w-6xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-4xl font-heading font-bold text-foreground mb-8"
+            >
+              About Me
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="text-left"
+            >
+              <p className="text-lg text-foreground leading-relaxed mb-6 font-light">
+                I'm Tomiwa Amole, a backend engineer from Lagos, Nigeria, who doesn't just build APIs - I build systems that scale.
+                With experience in financial technology and distributed systems, I approach every project with the understanding
+                that performance and reliability aren't features, they're requirements.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed mb-6 font-light">
+                My journey started with curiosity about how things work under the hood. I don't use abstractions blindly;
+                I understand what they cost and when to build my own. Whether it's optimizing database queries for millisecond
+                improvements or designing event-driven architectures that handle millions of requests, I love the challenge
+                of creating systems that are both powerful and elegant.
+              </p>
+              <p className="text-lg text-foreground leading-relaxed mb-8 font-light italic">
+                Beyond code, I'm passionate about continuous learning, sharing knowledge, and building technology that makes a difference.
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

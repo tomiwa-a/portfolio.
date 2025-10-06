@@ -7,7 +7,7 @@ import FloatingIcons from './FloatingIcons';
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-start md:items-center bg-transparent relative overflow-hidden pt-24 md:pt-0">
-      <div className="container mx-auto px-12 lg:px-20 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="container mx-auto px-8 lg:px-16 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -19,15 +19,15 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-primary text-lg mb-4 font-medium"
+            className="text-primary text-base mb-4 font-medium"
           >
             Hello, I'm
           </motion.p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
             Oluwatomiwa <br />
             <span className="text-primary">Amole</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted mb-8 max-w-lg">
+          <p className="text-lg md:text-xl text-muted mb-8 max-w-lg">
             Senior Backend Software Engineer specializing in scalable systems and modern technologies
           </p>
           <motion.div
@@ -39,14 +39,14 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-primary text-primary-foreground px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-primary/90 active:bg-primary/80 transition-all duration-300"
+              className="bg-primary text-primary-foreground px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl hover:bg-primary/90 active:bg-primary/80 transition-all duration-300"
             >
               View My Work
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="border-2 border-primary text-primary px-10 py-4 rounded-xl font-semibold hover:bg-primary hover:text-white active:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white active:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Get In Touch
             </motion.button>

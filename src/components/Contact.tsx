@@ -23,8 +23,8 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-transparent">
-      <div className="container mx-auto px-12 lg:px-20">
+    <section id="contact" className="py-12 bg-transparent">
+      <div className="container mx-auto px-8 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,8 +32,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-heading font-bold text-foreground mb-6">Get In Touch</h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
+          <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Get In Touch</h2>
+          <p className="text-base text-muted max-w-2xl mx-auto">
             I'm always interested in new opportunities and collaborations.
             Let's discuss how we can work together.
           </p>

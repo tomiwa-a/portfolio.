@@ -31,12 +31,26 @@ const projects = [
     github: 'https://github.com/username/project4',
     live: 'https://project4.com',
   },
+  {
+    title: 'API Gateway Service',
+    description: 'Custom API gateway with rate limiting, authentication, and request routing',
+    tech: ['Node.js', 'Express', 'Redis', 'JWT'],
+    github: 'https://github.com/username/project5',
+    live: 'https://project5.com',
+  },
+  {
+    title: 'Database Migration Tool',
+    description: 'Automated database schema migration and seeding tool for microservices',
+    tech: ['TypeScript', 'PostgreSQL', 'Docker', 'Kubernetes'],
+    github: 'https://github.com/username/project6',
+    live: 'https://project6.com',
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-transparent">
-      <div className="container mx-auto px-12 lg:px-20">
+    <section id="projects" className="py-12 bg-transparent">
+      <div className="container mx-auto px-8 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,13 +58,13 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-heading font-bold text-foreground mb-6">Projects</h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
+           <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Projects</h2>
+          <p className="text-base text-muted max-w-2xl mx-auto">
             A selection of projects I've worked on, showcasing my skills in backend development
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -58,8 +72,9 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.02, y: -5 }}
             >
-              <Card className="h-full bg-card border-border hover:border-primary transition-colors">
+              <Card className="h-full bg-card/90 backdrop-blur-sm border border-border/50 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-200 relative overflow-hidden">
                 <CardHeader>
                   <CardTitle className="text-foreground">{project.title}</CardTitle>
                   <CardDescription className="text-muted">{project.description}</CardDescription>

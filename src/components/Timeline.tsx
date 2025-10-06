@@ -48,8 +48,8 @@ const timelineEvents = [
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="py-20 bg-transparent">
-      <div className="container mx-auto px-12 lg:px-20">
+    <section id="timeline" className="py-12 bg-transparent">
+      <div className="container mx-auto px-8 lg:px-16">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -62,7 +62,7 @@ export default function Timeline() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="text-4xl font-heading font-bold text-foreground mb-6"
+            className="text-3xl font-heading font-bold text-foreground mb-6"
           >
             My Journey
           </motion.h2>
@@ -71,7 +71,7 @@ export default function Timeline() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg text-muted max-w-2xl mx-auto"
+            className="text-base text-muted max-w-2xl mx-auto"
           >
             From my first lines of code to leading complex backend systems
           </motion.p>

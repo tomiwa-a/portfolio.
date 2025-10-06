@@ -15,7 +15,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-with-pattern text-foreground font-body">
-      <div className="container mx-auto px-12 lg:px-20 py-20 pt-32">
+      <div className="container mx-auto px-8 lg:px-16 py-12 pt-32">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,10 +29,10 @@ export default function BlogPage() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h1 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
             All Blog Posts
           </h1>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
+          <p className="text-base text-muted max-w-2xl mx-auto">
             Thoughts on software engineering, system design, and technology trends
           </p>
         </motion.div>

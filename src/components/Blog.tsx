@@ -26,8 +26,8 @@ const blogPosts = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-20 bg-transparent">
-      <div className="container mx-auto px-12 lg:px-20">
+    <section id="blog" className="py-12 bg-transparent">
+      <div className="container mx-auto px-8 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,8 +35,8 @@ export default function Blog() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-heading font-bold text-foreground mb-6">Latest Blog Posts</h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto mb-8">
+          <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Latest Blog Posts</h2>
+          <p className="text-base text-muted max-w-2xl mx-auto mb-8">
             Thoughts on software engineering, system design, and technology trends
           </p>
            <Link to="/blog" className="text-primary hover:text-primary/80 transition-colors font-medium flex items-center mx-auto">
