@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import About from './components/About';
 import Philosophy from './components/Philosophy';
-import Future from './components/Future';
+// import Future from './components/Future';
 import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
@@ -51,7 +51,7 @@ function App() {
             <Hero />
             <About />
             <Philosophy />
-            <Future />
+            {/* <Future /> */}
             <Timeline />
             <Projects />
             <Blog />
